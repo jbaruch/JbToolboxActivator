@@ -7,7 +7,7 @@ import ratpack.exec.*
 
 ratpack {
     handlers {
-        get(':product') {
+        post(':product') {
           Thread.start {"open jetbrains://${pathTokens.product}/".execute()}
           response.send()
         }
